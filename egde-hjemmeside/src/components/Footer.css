@@ -6,7 +6,7 @@ footer {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-color);
-    padding: 1.2rem 2rem;
+    padding: 1rem 2rem;
     text-align: center;
     font-size: 1rem;
     margin-top: 0;
@@ -20,9 +20,30 @@ footer {
     left: 0;
     right: 0;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer a {
     text-decoration: underline;
     margin-left: 0.5rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 1rem;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Optional: text-align: right; */
 }

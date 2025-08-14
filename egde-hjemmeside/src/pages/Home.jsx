@@ -15,7 +15,7 @@ function Home() {
         <img src={egdeLogo} alt="Egde logo" className="hero-logo" />
         <h1 className="hero-title">Egde Praksisprosjekt 2025</h1>
         <p className="hero-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perferendis adipisci, incidunt aut consequuntur, dolorum sint ad quos tenetur est veniam obcaecati ipsum atque eaque sequi libero. Quam, autem sint?
+         Praksisprosjekt hos Egde Consulting. 
         </p>
         <div className="scroll-arrow" onClick={scrollToContent}>
           <span className="scroll-text">Vis mer</span>
