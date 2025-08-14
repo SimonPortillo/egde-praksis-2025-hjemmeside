@@ -1,7 +1,14 @@
 import './Home.css';
 import egdeLogo from '../assets/egde.svg';
+import { useRef } from 'react';
 
 function Home() {
+  const containerRef = useRef(null);
+
+  const scrollToContent = () => {
+    containerRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <section className="hero-section">
@@ -10,9 +17,13 @@ function Home() {
         <p className="hero-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perferendis adipisci, incidunt aut consequuntur, dolorum sint ad quos tenetur est veniam obcaecati ipsum atque eaque sequi libero. Quam, autem sint?
         </p>
+        <div className="scroll-arrow" onClick={scrollToContent}>
+          <span className="scroll-text">Vis mer</span>
+          <div className="arrow-icon"></div>
+        </div>
       </section>
-
-      <div className="home-container">
+      
+      <div className="home-container" ref={containerRef}>
         <h2 className="home-title">Oppgavebeskrivelse</h2>
         <p className="home-description">
             Dette er en beskrivelse av oppgaven for Egde Praksisprosjekt 2025. Her kan du finne all nødvendig informasjon om prosjektet, inkludert mål, tidslinje og forventninger.

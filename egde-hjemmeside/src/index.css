@@ -74,15 +74,8 @@ button:focus-visible {
 
 
 ::selection {
-  background: rgba(208, 108, 255, 0.2); /* --egde-purple with opacity */
+  background: rgba(252, 182, 6, 0.2); /* --egde-purple with opacity */
   border-radius: 4px;
 
   color: var(--text-color);
 }
-
-::-moz-selection {
-  background: rgba(208, 108, 255, 0.2);
-  border-radius: 4px;
-  color: var(--text-color);
-}
-
