@@ -38,26 +38,34 @@ nav a {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.2s;
-  color: var(--egde-blue);
+  transition: all 0.2s; 
+  color: var(--text-descripton-color);
+  position: relative;
 }
 
 nav a:hover {
-  color: var(--egde-purple);
+  color: var(--text-descripton-color);
+  transform: translateY(-2px);
 }
 
-/* Add different colors for each nav link */
-nav ul li:nth-child(1) a { color: var(--egde-blue); }
-nav ul li:nth-child(1) a:hover { color: var(--egde-purple); }
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
 
-nav ul li:nth-child(2) a { color: var(--egde-yellow); }
-nav ul li:nth-child(2) a:hover { color: var(--egde-orange); }
+nav ul li:nth-child(1) a::after { background-color: var(--egde-blue); }
+nav ul li:nth-child(2) a::after { background-color: var(--egde-yellow); }
+nav ul li:nth-child(3) a::after { background-color: var(--egde-orange); }
+nav ul li:nth-child(4) a::after { background-color: var(--egde-purple); }
 
-nav ul li:nth-child(3) a { color: var(--egde-orange); }
-nav ul li:nth-child(3) a:hover { color: var(--egde-purple); }
-
-nav ul li:nth-child(4) a { color: var(--egde-purple); }
-nav ul li:nth-child(4) a:hover { color: var(--egde-blue); }
+nav a:hover::after {
+  width: 100%;
+}
 
 
 
