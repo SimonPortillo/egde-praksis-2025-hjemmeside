@@ -2,32 +2,45 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color-scheme: light;
+  color: var(--text-color);
+  background-color: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+
+  /* Color variables */
+  --text-color: #213547; /* Default text color */
+  --text-description-color: #4a5568; /* Description text color */
+  --egde-blue: #1080e5;
+  --egde-yellow: #fcb606;
+  --egde-orange: #ff7300;
+  --egde-purple: #d06cff;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #8b8fff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #ca6fff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 h1 {
@@ -37,32 +50,39 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: #ffffff;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.25s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background: #f5f7fa;
+  border-color: rgba(0, 0, 0, 0.2);
 }
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto rgba(139, 143, 255, 0.5);
+}
+
+
+
+::selection {
+  background: rgba(208, 108, 255, 0.2); /* --egde-purple with opacity */
+  border-radius: 4px;
+
+  color: var(--text-color);
+}
+
+::-moz-selection {
+  background: rgba(208, 108, 255, 0.2);
+  border-radius: 4px;
+  color: var(--text-color);
+}
+

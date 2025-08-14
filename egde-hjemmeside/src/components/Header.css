@@ -1,0 +1,64 @@
+nav {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #213547;
+    padding: 0.8rem 2rem; /* reduced vertical padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, var(--egde-blue), var(--egde-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0.2em; /* for å unngå clipping */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  color: var(--egde-blue);
+}
+
+nav a:hover {
+  color: var(--egde-purple);
+}
+
+/* Add different colors for each nav link */
+nav ul li:nth-child(1) a { color: var(--egde-blue); }
+nav ul li:nth-child(1) a:hover { color: var(--egde-purple); }
+
+nav ul li:nth-child(2) a { color: var(--egde-yellow); }
+nav ul li:nth-child(2) a:hover { color: var(--egde-orange); }
+
+nav ul li:nth-child(3) a { color: var(--egde-orange); }
+nav ul li:nth-child(3) a:hover { color: var(--egde-purple); }
+
+nav ul li:nth-child(4) a { color: var(--egde-purple); }
+nav ul li:nth-child(4) a:hover { color: var(--egde-blue); }
+
+
+
+
