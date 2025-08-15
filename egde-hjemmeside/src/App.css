@@ -5,14 +5,13 @@
 }
 
 .page-wrapper {
-  flex: 1 0 auto;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 main {
