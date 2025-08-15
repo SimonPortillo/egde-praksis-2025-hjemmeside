@@ -6,7 +6,7 @@ footer {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-color);
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     text-align: center;
     font-size: 1rem;
     margin-top: 0;
@@ -27,7 +27,39 @@ footer {
 
 footer a {
     text-decoration: underline;
-    margin-left: 0.5rem;
+}
+
+.collaboration-container {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.footer-logo {
+    height: 38px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.footer-logo:first-child {
+    margin-top: 1rem;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+.vertical-spacer {
+  height: 35px;
+  width: 2px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .footer-left {
@@ -35,13 +67,9 @@ footer a {
   align-items: center;
 }
 
-.footer-logo {
-  height: 40px;
-  width: auto;
-  margin-right: 1rem;
-}
 
 .footer-right {
+  font-family: 'Gloria Hallelujah';
   display: flex;
   align-items: center;
   gap: 0.5rem;

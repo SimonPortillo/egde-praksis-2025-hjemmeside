@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light;
@@ -37,9 +37,8 @@ html, body {
 body {
   margin: 0;
   min-height: 100vh;
-
-background-image: url("https://www.transparenttextures.com/patterns/connected.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -74,8 +73,7 @@ button:focus-visible {
 }
 
 ::selection {
-  background: rgba(252, 182, 6, 0.2); /* --egde-purple with opacity */
+  background: rgba(252, 182, 6, 0.2); 
   border-radius: 4px;
-
   color: var(--text-color);
 }

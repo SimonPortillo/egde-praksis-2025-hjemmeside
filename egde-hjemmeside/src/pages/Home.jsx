@@ -13,7 +13,9 @@ function Home() {
     <>
       <section className="hero-section">
         <img src={egdeLogo} alt="Egde logo" className="hero-logo" />
-        <h1 className="hero-title">Egde Praksisprosjekt 2025</h1>
+        <div style={{ textAlign: 'center' }}>
+          <h1 className="hero-title">Egde Praksisprosjekt 2025</h1>
+        </div>
         <p className="hero-description">
          Praksisprosjekt hos Egde Consulting. 
         </p>
