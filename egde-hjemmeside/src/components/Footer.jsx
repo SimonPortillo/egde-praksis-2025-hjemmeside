@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className="footer">
     <div className="footer-left">
       <div className="collaboration-container">
-        <a href="https://www.egde.no" target="_blank" rel="noopener noreferrer">
+        <a href="https://egde.no" target="_blank" rel="noopener noreferrer">
           <img src={egdeLogo} alt="Egde Logo" className="footer-logo" />
         </a>
         <div className="vertical-spacer"></div>

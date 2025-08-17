@@ -28,18 +28,18 @@ function Home() {
       <div className="home-container" ref={containerRef}>
         <h2 className="home-title">Oppgavebeskrivelse</h2>
         <p className="home-description">
-            Dette er en beskrivelse av oppgaven for Egde Praksisprosjekt 2025. Her kan du finne all nødvendig informasjon om prosjektet, inkludert mål, tidslinje og forventninger.
-        </p>
-        <p className="home-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur impedit vel deleniti asperiores alias aperiam distinctio illum, voluptatum labore recusandae exercitationem ducimus quod numquam debitis placeat magnam cumque consectetur molestias.
+            <a href="https://www.uia.no/studier/emner/2025/host/is-302.html">Praksisprosjektet IS-302</a> hos Egde i 2025 fokuserer på full-stack utvikling, hvor vi skal jobbe med moderne webteknologier som React og Next.js. Vi er tre studenter, to fra UiA og en fra USN, som skal hjelpe til med å videreutvikle en AI-chatbot; EgdeAI.
+          <br />
+          <br />
+            <a href="https://egde.no/product/egdeai/">"EgdeAI</a> er en applikasjon og en chattetjeneste. I kjernen av EgdeAI ligger kunstig intelligens (AI) som er bygget på GPT-teknologien til OpenAI. Dette bidrar til naturlig språkprosessering- og generering, slik at applikasjonen kan gi rike og nyanserte svar på spørsmål fra brukerne. Løsningen tilbyr et trygt «rom» hvor man ikke trener modellene eller eksponerer interne data for omverdenen på en ukontrollert måte."
         </p>
         <p className="home-description">
             For mer informasjon, vennligst se vår <a href="/about">Om oss</a> side.
         </p>
-        <button className="home-cta">Se video</button>
+        <button onClick={() => {alert("Kommer senere!")}} className="home-cta">Se video</button>
       </div>
     </>
   );
 }
 
-export default Home;
+export default Home;  

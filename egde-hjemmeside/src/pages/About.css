@@ -1,0 +1,26 @@
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-header h2 {
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px    ;
+    transition: transform 0.2s ease;
+    padding-top: 0.2rem;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+}
