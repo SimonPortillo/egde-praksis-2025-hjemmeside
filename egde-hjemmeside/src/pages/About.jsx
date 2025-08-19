@@ -28,16 +28,16 @@ function About() {
             <div className="profile-header">
                     <h2>Ida</h2>
                     <div className="social-links">
-                        <a href="" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/idassvv" target="_blank" rel="noopener noreferrer">
                             <img src={githubLogo} alt="GitHub" className="social-icon" />
                         </a>
-                        <a href="" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank" rel="noopener noreferrer">
                             <img src={linkedinLogo} alt="LinkedIn" className="social-icon" />
                         </a>
                     </div>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem modi labore, aliquid aspernatur maiores corrupti debitis veritatis magnam eligendi exercitationem non atque, sed voluptatum commodi, a in aliquam dicta provident!
+                    Ida Svendby, 26 år fra Porsgrunn. Jeg er interresert i KI og frontend utvikling. Jeg har erfaring med Java,C# og (.NET)
                 </p>  
             </div>
         </div>
