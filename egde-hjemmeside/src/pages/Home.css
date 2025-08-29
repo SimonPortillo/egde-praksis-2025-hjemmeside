@@ -1,35 +1,28 @@
 .home-container {
   max-width: 900px;
   width: 100%;
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 4rem clamp(1rem, 5vw, 2rem);
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(16px);
-  border-radius: 18px;
-  border: double 2px transparent;
-  background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
-    linear-gradient(
-      -45deg, 
-      var(--egde-blue),
-      var(--egde-yellow),
-      var(--egde-orange),
-      var(--egde-purple),
-      var(--egde-blue)
-    );
-  background-size: 100% 100%, 400% 400%;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+
+section[id] {
+  min-height: calc(100vh - 80px);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  animation: gradient-rotate 8s ease infinite;
+  justify-content: center;
+  position: relative;
+  padding-left: 80px; /* space for scroll guide */
+  box-sizing: border-box;
+}
+
+section[id]:not(:last-of-type) {
+  margin-bottom: 120px;
 }
 
 .home-title {
+  font-family: 'Space Mono';
   font-size: 2.5rem;
-  font-weight: 700;
   color: var(--text-color);
   margin-bottom: 1rem;
   letter-spacing: 2px;
@@ -43,9 +36,6 @@
   text-align: justify;
   line-height: 1.6;
   animation: fadeInUp 1s ease-out 0.5s backwards;
-}
-.home-description:nth-last-child(2) {
-  font-family: 'Gloria Hallelujah';
 }
 
 .home-cta {
@@ -68,8 +58,8 @@
 
 /* Hero Section Styles */
 .hero-section {
-  min-height: calc(100vh - 100px); 
-  padding: 1rem 2rem 0; 
+  min-height: calc(100vh - var(--nav-height) - 40px); 
+  padding: calc(var(--nav-height) + 0.5rem) 2rem 0; 
   text-align: center;
   margin-bottom: 0; 
   position: relative;

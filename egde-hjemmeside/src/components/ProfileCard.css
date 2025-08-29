@@ -1,0 +1,76 @@
+.profile-card {
+  --card-bg: hsla(0 0% 100% / 0.85);
+  position: relative;
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 20px;
+  background: var(--card-bg);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid rgba(255 255 255 / 0.35);
+  box-shadow: 0 8px 32px -8px rgba(31 38 135 / 0.25);
+  overflow: hidden;
+  flex: 1 1 320px;
+  min-width: 260px;
+  transition: transform 0.35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s;
+}
+.profile-card::before, .profile-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.profile-card::before {
+  background: radial-gradient(circle at 18% 12%, var(--egde-yellow) 0, transparent 60%),
+              radial-gradient(circle at 80% 90%, var(--egde-purple) 0, transparent 55%);
+  opacity: 0.18;
+  z-index: 0;
+}
+.profile-card::after {
+  background: linear-gradient(120deg, var(--egde-blue) 0%, var(--egde-purple) 100%);
+  mix-blend-mode: overlay;
+  opacity: 0;
+  transition: opacity .4s;
+  z-index: 0;
+}
+.profile-card:hover {
+  transform: translateY(-6px) rotate3d(1,1,0,4deg);
+  box-shadow: 0 16px 40px -10px rgba(31 38 135 / 0.35);
+}
+.profile-card:hover::after { opacity: .18; }
+
+.profile-media { flex: 0 0 auto; position: relative; z-index: 2; }
+.profile-avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0 0 0 / .18);
+  border: 3px solid rgba(255 255 255 / .7);
+  background: linear-gradient(135deg, var(--egde-blue), var(--egde-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .5px;
+  position: relative;
+  z-index: 2; /* sit above gradient overlays */
+}
+.profile-avatar.fallback { font-family: 'Gloria Hallelujah', cursive; }
+.profile-body { display: flex; flex-direction: column; gap: .4rem; position: relative; z-index: 2; }
+.profile-name { margin: 0; font-size: 1.4rem; background: linear-gradient(90deg,var(--egde-blue),var(--egde-purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.profile-role { margin: 0; font-size: .85rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-description-color); font-weight: 600; }
+.profile-bio { margin: .2rem 0 0; font-size: .95rem; line-height: 1.45; color: var(--text-description-color); }
+.profile-links { display: flex; gap: .75rem; margin-top: .5rem; }
+.profile-links a img { width: 26px; height: 26px; filter: drop-shadow(0 2px 3px rgba(0 0 0 / .25)); transition: transform .25s, filter .4s; }
+.profile-links a:hover img { transform: translateY(-3px) scale(1.05); filter: drop-shadow(0 4px 6px rgba(0 0 0 / .35)); }
+
+@media (max-width: 640px) {
+  .profile-card { flex-direction: column; align-items: center; text-align: center; }
+  .profile-avatar { width: 92px; height: 92px; }
+  .profile-body { align-items: center; }
+  .profile-bio { text-align: center; }
+}

@@ -1,4 +1,3 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -9,18 +8,29 @@ import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <main className="page-wrapper">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/status_1" element={<Status1 />} />
-          <Route path="/status_2" element={<Status2 />} />
-        </Routes>
+        {/* Home / Hero & Intro */}
+        <section id="home">
+          <Home />
+        </section>
+
+        {/* About Section */}
+        <section id="about">
+          <About />
+        </section>
+
+        {/* Status Sections */}
+        <section id="status1">
+          <Status1 />
+        </section>
+        <section id="status2">
+          <Status2 />
+        </section>
       </main>
       <Footer />
-    </BrowserRouter>
+    </>
   )
 }
 

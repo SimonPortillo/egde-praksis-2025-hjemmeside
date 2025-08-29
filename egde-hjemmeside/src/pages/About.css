@@ -1,26 +1,51 @@
-.profile-header {
+/* About Section Layout */
+.about-section-wrapper {
+    --section-pad: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 2.5rem);
+    position: relative;
+    padding: var(--section-pad);
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
+    flex-direction: column;
+    gap: clamp(2rem, 5vw, 3.5rem);
+    background: linear-gradient(145deg, rgba(255 255 255 / .65), rgba(255 255 255 / .35));
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(255 255 255 / .4);
+    border-radius: 34px;
+    box-shadow: 0 8px 40px -12px rgba(0 0 0 / .18);
+    overflow: hidden;
 }
 
-.profile-header h2 {
-    margin: 0;
+.about-section-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(16 128 229 / .18), transparent 60%),
+        radial-gradient(circle at 88% 82%, rgba(208 108 255 / .22), transparent 55%),
+        linear-gradient(120deg, rgba(255 255 255 / .4), rgba(255 255 255 / .1));
+    pointer-events: none;
+    mix-blend-mode: normal;
 }
 
-.social-links {
-    display: flex;
-    gap: 0.75rem;
+.section-intro { max-width: 820px; }
+.section-title { margin: 0 0 .75rem; font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.05; }
+.gradient-text { background: linear-gradient(90deg, var(--egde-blue), var(--egde-purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.section-lead { margin: 0; font-size: clamp(1.05rem, 1.6vw, 1.25rem); line-height: 1.5; color: var(--text-description-color); }
+
+.profiles-grid {
+    display: grid;
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+    align-items: stretch;
 }
 
-.social-icon {
-    width: 28px;
-    height: 28px    ;
-    transition: transform 0.2s ease;
-    padding-top: 0.2rem;
+@media (max-width: 900px) {
+    .about-section-wrapper { border-radius: 28px; }
 }
 
-.social-icon:hover {
-    transform: translateY(-2px);
+@media (max-width: 640px) {
+    .about-section-wrapper { padding: clamp(2rem, 7vw, 3rem) 1.1rem; }
 }

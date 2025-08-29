@@ -1,19 +1,23 @@
 nav {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--text-color);
-    padding: 0.8rem 2rem; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 0 0 16px 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-color);
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 16px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  width: 100vw;
+  max-width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 nav h1 {
@@ -31,23 +35,45 @@ nav h1 {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: auto;
 }
 
 nav a {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: all 0.2s; 
-  color: var(--text-descripton-color);
+  transition: all 0.2s;
+  color: var(--text-description-color);
   position: relative;
+  padding: 0 0.2em;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+nav ul li:nth-child(1) a:hover {
+  color: var(--egde-blue);
+}
+nav ul li:nth-child(2) a:hover {
+  color: var(--egde-yellow);
+}
+nav ul li:nth-child(3) a:hover {
+  color: var(--egde-orange);
+}
+nav ul li:nth-child(4) a:hover {
+  color: var(--egde-purple);
 }
 
 nav a:hover {
-  color: var(--text-descripton-color);
   transform: translateY(-2px);
 }
+
 
 nav a::after {
   content: '';
@@ -56,16 +82,27 @@ nav a::after {
   height: 3px;
   bottom: -4px;
   left: 0;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, background-color 0.2s;
 }
-
 nav ul li:nth-child(1) a::after { background-color: var(--egde-blue); }
 nav ul li:nth-child(2) a::after { background-color: var(--egde-yellow); }
 nav ul li:nth-child(3) a::after { background-color: var(--egde-orange); }
 nav ul li:nth-child(4) a::after { background-color: var(--egde-purple); }
-
 nav a:hover::after {
   width: 100%;
+}
+
+@media (max-width: 700px) {
+  nav {
+    padding: 0.7rem 0.7rem;
+  }
+  nav ul {
+    gap: 1.1rem;
+  }
+  nav a {
+    min-width: 60px;
+    font-size: 1rem;
+  }
 }
 
 
