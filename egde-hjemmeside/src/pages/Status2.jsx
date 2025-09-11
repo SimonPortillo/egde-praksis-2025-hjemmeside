@@ -10,7 +10,7 @@ function Status2() {
             <h1 className="page-title">Status 2</h1>
             <div className="progress-layout">
                 <div className="progress-intro">
-                    <p>Andre status fokuserer på fremdrift og struktur. Vi har bygget flere gjenbrukbare komponenter og forbedret designet for konsistens.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nostrum culpa ab minus alias vitae nam ratione debitis consequatur, tenetur dolorum sapiente magnam veniam minima, temporibus inventore delectus, repellendus soluta!</p>
                 </div>
                 <div className="metrics-grid">
                     {metrics.map(m => (

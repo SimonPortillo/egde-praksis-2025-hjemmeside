@@ -6,7 +6,7 @@ function About() {
         <div className="about-section-wrapper">
             <div className="section-intro">
                 <h1 className="section-title gradient-text">Om oss</h1>
-                <p className="section-lead">Et lite team av nysgjerrige studenter som bygger med moderne webteknologi og AI.</p>
+                <p className="section-lead">I år har Egde tatt inn to fra UiA og en fra USN. Vi fra UiA presenterer oss:</p>
             </div>
             <div className="profiles-grid">
                 <ProfileCard
