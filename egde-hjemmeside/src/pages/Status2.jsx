@@ -7,7 +7,7 @@ function Status2() {
     ];
     return (
         <div className="page-container fancy-status">
-            <h1 className="page-title">Status 2</h1>
+            <h1 className="page-title">Status 2 - 20.10.2025</h1>
             <div className="progress-layout">
                 <div className="progress-intro">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nostrum culpa ab minus alias vitae nam ratione debitis consequatur, tenetur dolorum sapiente magnam veniam minima, temporibus inventore delectus, repellendus soluta!</p>

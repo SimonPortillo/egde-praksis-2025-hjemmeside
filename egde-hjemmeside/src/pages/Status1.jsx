@@ -9,8 +9,8 @@ function Status1() {
 
     return (
         <div className="page-container fancy-status">
-            <h1 className="page-title">Status 1</h1>
-            
+            <h1 className="page-title">Status 1 - 12.09.2025</h1>
+
             {/* Om Egde Section */}
             <section className="content-section">
                 <h2 className="section-title">Om Egde</h2>
@@ -42,25 +42,35 @@ function Status1() {
                 <h2 className="section-title">Våre arbeidsoppgaver så langt hos Egde</h2>
                 <div className="work-tasks">
                     <div className="task-card">
-                        <h3>Simon | Internasjonalisering; EgdeAI</h3>
-                        <p>
-                            Simon startet med å sette seg inn i Next.js og EgdeAI. Lærte om Internasjonalisering (i18n) 
-                            og Lokalisering (l10n). Satt opp prosjektet til å støtte flere språk og formateringer (f.eks. datoer, valuta) med egne ruter for hvert språk (locale),
-                            og implementerte Lokalisering, altså å faktisk legge til et eller flere språk, i vårt 
-                            tilfelle så var det engelsk. Dette innebærerte å lage en slags ordliste i JSON format for 
-                            å så hente meldingen inn i relevante komponenter, via en hook. I praksis må man bytte ut all tekst i alle komponenter med en variabel som byttes ut med teksten fra ordlisten basert på brukerens prefiks (eksempel: /en/about).
-                        </p>
+                        <div className="task-image">
+                            <img src="/simon-jobb.jpg" alt="Simon jobber med koding" />
+                        </div>
+                        <div className="task-content">
+                            <h3>Simon | Internasjonalisering; EgdeAI</h3>
+                            <p>
+                                Simon startet med å sette seg inn i Next.js og EgdeAI. Lærte om Internasjonalisering (i18n) 
+                                og Lokalisering (l10n). Satt opp prosjektet til å støtte flere språk og formateringer (f.eks. datoer, valuta) med egne ruter for hvert språk (locale),
+                                og implementerte Lokalisering, altså å faktisk legge til et eller flere språk, i vårt 
+                                tilfelle så var det engelsk. Dette innebærerte å lage en slags ordliste i JSON format for 
+                                å så hente meldingen inn i relevante komponenter, via en hook. I praksis må man bytte ut all tekst i alle komponenter med en variabel som byttes ut med teksten fra ordlisten basert på brukerens prefiks (eksempel: /en/about).
+                            </p>
+                        </div>
                     </div>
                     <div className="task-card">
-                        <h3>Ida | Komponentbibliotek; Egd-UI</h3>
-                        <p>
-                            Ida startet på et komponentbibliotek prosjekt kalt Egd-UI, hvor oppgaven gikk ut på å oversette et eksisterende 
-                            register (basert på shadcn komponenter) med et ferdig definert design i Figma. Hensikten er å sikre at registeret samsvarer 
-                            med designmalen, og å korrigere eventuelle avvik. Dette kan for eksempel være feil bruk av 
-                            font eller farger, eller tilfeller der flere varianter må legges til i registeret. Innad i 
-                            prosjektet er det mange ulike oppgaver som må løses, og ettersom Simon er ferdig med sitt 
-                            første prosjekt har han gått over til å jobbe med dette prosjektet nå.
-                        </p>
+                        <div className="task-image">
+                            <img src="/ida-jobb.jpg" alt="Ida jobber med design" />
+                        </div>
+                        <div className="task-content">
+                            <h3>Ida | Komponentbibliotek; Egd-UI</h3>
+                            <p>
+                                Ida startet på et komponentbibliotek prosjekt kalt Egd-UI, hvor oppgaven gikk ut på å oversette et eksisterende 
+                                register (basert på shadcn komponenter) med et ferdig definert design i Figma. Hensikten er å sikre at registeret samsvarer 
+                                med designmalen, og å korrigere eventuelle avvik. Dette kan for eksempel være feil bruk av 
+                                font eller farger, eller tilfeller der flere varianter må legges til i registeret. Innad i 
+                                prosjektet er det mange ulike oppgaver som må løses, og ettersom Simon er ferdig med sitt 
+                                første prosjekt har han gått over til å jobbe med dette prosjektet nå.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
