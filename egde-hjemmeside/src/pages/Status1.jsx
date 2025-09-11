@@ -81,7 +81,7 @@ function Status1() {
                 <div className="challenges-content">
                     <h3>Internasjonalisering; EgdeAI</h3>
                     <p>
-                        Å sette opp prosjektet til å støtte flere språk var en utfordring da det krevde en god forståelse av prosjektet struktur. Det var omfattende endringer i struktur som måtte til for å få til å ha flerspråklighet. I tillegg var det utfordrende å implementere oversettelser i komponenter som allerede var komplekse, noe som krevde nøye planlegging og testing for å sikre at alt fungerte som forventet.
+                        Å sette opp prosjektet til å støtte flere språk var en utfordring da det krevde en god forståelse av prosjektets struktur. Det var større endringer i struktur som måtte til for å få til å ha flerspråklighet. I tillegg var det utfordrende å implementere oversettelser i komponenter som allerede var komplekse. Det var også ofte vanskelig å finne hvor og når teksten framstod i applikasjonen. Mye tid ble brukt på å fremprovosere feil for å kunne sjekke at feilmeldinger også ble oversatt riktig.
                     </p>
                     <h3>Komponentbibliotek; Egd-UI</h3>
                     <p>
