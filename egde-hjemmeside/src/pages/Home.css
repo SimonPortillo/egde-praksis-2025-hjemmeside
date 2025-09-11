@@ -12,7 +12,6 @@ section[id] {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-left: 80px; /* space for scroll guide */
   box-sizing: border-box;
 }
 
