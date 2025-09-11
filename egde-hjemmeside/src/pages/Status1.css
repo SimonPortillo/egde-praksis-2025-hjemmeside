@@ -83,9 +83,11 @@
 /* Work tasks section */
 .work-tasks {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 2rem;
   margin-top: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .task-card {
@@ -99,6 +101,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .task-card::before {
@@ -191,6 +196,7 @@
   .section-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .work-tasks {
@@ -208,21 +214,38 @@
   
   .task-content h3 {
     font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .task-content p {
+    text-align: center;
   }
   
   .learn-more-btn {
     padding: 0.65rem 1.25rem;
     font-size: 0.9rem;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .text-content {
+    text-align: center;
+  }
+  
+  .challenges-content {
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .section-title {
     font-size: 1.3rem;
+    text-align: center;
   }
   
   .work-tasks {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
   .task-image {
@@ -235,11 +258,29 @@
   
   .task-content h3 {
     font-size: 1rem;
+    text-align: center;
+  }
+  
+  .task-content p {
+    text-align: center;
   }
   
   .text-content p,
-  .task-content p,
   .challenges-content p {
     font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .learn-more {
+    text-align: center;
+  }
+  
+  .learn-more-btn {
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .challenges-content {
+    text-align: center;
   }
 }

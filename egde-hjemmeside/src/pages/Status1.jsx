@@ -67,8 +67,8 @@ function Status1() {
                                 register (basert på shadcn komponenter) med et ferdig definert design i Figma. Hensikten er å sikre at registeret samsvarer 
                                 med designmalen, og å korrigere eventuelle avvik. Dette kan for eksempel være feil bruk av 
                                 font eller farger, eller tilfeller der flere varianter må legges til i registeret. Innad i 
-                                prosjektet er det mange ulike oppgaver som må løses, og ettersom Simon er ferdig med sitt 
-                                første prosjekt har han gått over til å jobbe med dette prosjektet nå.
+                                prosjektet er det mange ulike oppgaver som må løses, og ettersom Simon er ferdig med sin 
+                                første oppgave har han gått over til å jobbe med dette prosjektet nå.
                             </p>
                         </div>
                     </div>

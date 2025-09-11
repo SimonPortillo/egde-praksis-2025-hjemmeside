@@ -1,9 +1,10 @@
 .home-container {
-  max-width: 900px;
+  max-width: min(900px, 100vw);
   width: 100%;
   margin: 0 auto;
-  padding: 4rem clamp(1rem, 5vw, 2rem);
-  margin-bottom: 100px;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+  margin-bottom: clamp(50px, 15vw, 100px);
+  box-sizing: border-box;
 }
 
 section[id] {
@@ -13,23 +14,26 @@ section[id] {
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 section[id]:not(:last-of-type) {
-  margin-bottom: 120px;
+  margin-bottom: clamp(60px, 15vw, 120px);
 }
 
 .home-title {
   font-family: 'Space Mono';
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   color: var(--text-color);
   margin-bottom: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: clamp(1px, 0.5vw, 2px);
   animation: fadeInDown 1s ease-out;
 }
 
 .home-description {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   color: var(--text-description-color);
   margin-bottom: 2rem;
   text-align: justify;
@@ -38,10 +42,10 @@ section[id]:not(:last-of-type) {
 }
 
 .home-cta {
-  padding: 0.8rem 2rem;
+  padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.5rem, 4vw, 2rem);
   background: linear-gradient(90deg, var(--egde-blue), var(--egde-purple));
   color: white;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   font-weight: 600;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -58,10 +62,10 @@ section[id]:not(:last-of-type) {
 /* Hero Section Styles */
 .hero-section {
   min-height: calc(100vh - 1px); /* ensure full viewport height */
-  padding-top: var(--nav-height, 80px); /* space for navbar */
-  padding-bottom: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-top: clamp(80px, 12vw, 100px); /* space for navbar */
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
   text-align: center;
   margin-bottom: 0;
   position: relative;
@@ -70,20 +74,23 @@ section[id]:not(:last-of-type) {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .hero-logo {
-  width: 340px;
+  width: clamp(250px, 60vw, 340px);
   max-width: 90vw;
   height: auto;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
   margin-top: 0.5rem;
   animation: float 6s ease-in-out infinite;
 }
 
 .hero-title {
   font-family: 'Space Mono';
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   color: #213547;
   margin-bottom: 1rem;
   position: relative;
@@ -96,10 +103,10 @@ section[id]:not(:last-of-type) {
 }
 
 .hero-description {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 3.5vw, 1.5rem);
   color: var(--text-description-color);
   max-width: 800px;
-  margin: 0 auto 2rem;
+  margin: 0 auto clamp(1.5rem, 4vw, 2rem);
   animation: fadeInUp 1s ease-out 0.5s backwards;
 }
 
@@ -210,4 +217,157 @@ section[id]:not(:last-of-type) {
 @keyframes blink-caret {
   from, to { border-right-color: transparent }
   50% { border-right-color: var(--egde-yellow) }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: clamp(70px, 10vw, 90px);
+    padding-bottom: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .scroll-text {
+    font-size: 0.9rem;
+  }
+  
+  .arrow-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: clamp(1.5rem, 4vw, 2rem) clamp(0.75rem, 3vw, 1rem);
+    max-width: calc(100vw - clamp(0.5rem, 2vw, 1rem));
+  }
+  
+  .hero-section {
+    padding-top: clamp(60px, 8vw, 80px);
+    padding-left: clamp(0.75rem, 3vw, 1.5rem);
+    padding-right: clamp(0.75rem, 3vw, 1.5rem);
+    max-width: 100vw;
+  }
+  
+  .hero-logo {
+    width: clamp(200px, 50vw, 280px);
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .hero-title {
+    font-size: clamp(1.5rem, 4.5vw, 2rem);
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+  
+  .hero-description {
+    font-size: clamp(0.95rem, 2.8vw, 1.2rem);
+    margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+    line-height: 1.4;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .home-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  .home-description {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .home-cta {
+    padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(1.25rem, 3vw, 1.75rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+  }
+  
+  .scroll-text {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  
+  .arrow-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .arrow-icon::after {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-section {
+    padding-top: clamp(55px, 7vw, 70px);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: calc(100vw - 1rem);
+  }
+  
+  .hero-logo {
+    width: clamp(180px, 45vw, 250px);
+    margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  }
+  
+  .hero-title {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .hero-description {
+    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .home-container {
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 0.75rem);
+    max-width: calc(100vw - 1rem);
+  }
+  
+  .home-title {
+    text-align: center;
+  }
+  
+  .home-description {
+    text-align: center;
+  }
+  
+  .home-cta {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+  }
+  
+  .scroll-text {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .arrow-icon {
+    width: 28px;
+    height: 28px;
+  }
 }

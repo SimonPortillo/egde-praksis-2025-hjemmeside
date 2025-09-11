@@ -5,28 +5,30 @@ nav {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: var(--text-color);
-  padding: 0.8rem 2rem;
+  padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1rem, 3vw, 2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 0 0 16px 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: fixed;
-  width: 100vw;
+  width: 100%;
   max-width: 100vw;
   left: 0;
   top: 0;
   z-index: 1000;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 nav h1 {
     font-family: 'Gloria Hallelujah';
     margin: 0;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: clamp(1px, 0.5vw, 2px);
     background: linear-gradient(90deg, var(--egde-blue), var(--egde-purple));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-bottom: 0.2em; /* for å unngå clipping */
@@ -37,7 +39,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 2rem;
+  gap: clamp(1rem, 3vw, 2rem);
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
@@ -46,14 +48,14 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   font-weight: 500;
   transition: all 0.2s;
   color: var(--text-description-color);
   position: relative;
   padding: 0 0.2em;
   display: inline-block;
-  min-width: 80px;
+  min-width: clamp(60px, 15vw, 80px);
   text-align: center;
 }
 
@@ -94,14 +96,59 @@ nav a:hover::after {
 
 @media (max-width: 700px) {
   nav {
-    padding: 0.7rem 0.7rem;
+    padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.5rem, 2vw, 0.7rem);
   }
   nav ul {
-    gap: 1.1rem;
+    gap: clamp(0.75rem, 2vw, 1.1rem);
   }
   nav a {
-    min-width: 60px;
-    font-size: 1rem;
+    min-width: clamp(50px, 12vw, 60px);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+  nav h1 {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.5rem;
+  }
+  
+  nav ul {
+    gap: clamp(0.5rem, 1.5vw, 0.8rem);
+  }
+  
+  nav a {
+    min-width: clamp(40px, 10vw, 50px);
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    padding: 0 0.1em;
+  }
+  
+  nav h1 {
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 360px) {
+  nav {
+    padding: 0.4rem;
+  }
+  
+  nav ul {
+    gap: 0.4rem;
+  }
+  
+  nav a {
+    min-width: 35px;
+    font-size: 0.75rem;
+    padding: 0;
+  }
+  
+  nav h1 {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
   }
 }
 

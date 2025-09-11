@@ -2,17 +2,17 @@
   --card-bg: hsla(0 0% 100% / 0.85);
   position: relative;
   display: flex;
-  gap: 1.25rem;
-  padding: 1.5rem 1.75rem;
-  border-radius: 20px;
+  gap: clamp(1rem, 2.5vw, 1.25rem);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border-radius: clamp(16px, 4vw, 20px);
   background: var(--card-bg);
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   border: 1px solid rgba(255 255 255 / 0.35);
   box-shadow: 0 8px 32px -8px rgba(31 38 135 / 0.25);
   overflow: hidden;
-  flex: 1 1 320px;
-  min-width: 260px;
+  flex: 1 1 300px;
+  min-width: 250px;
   transition: transform 0.35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s;
 }
 .profile-card::before, .profile-card::after {
@@ -42,9 +42,9 @@
 
 .profile-media { flex: 0 0 auto; position: relative; z-index: 2; }
 .profile-avatar {
-  width: 86px;
-  height: 86px;
-  border-radius: 24px;
+  width: clamp(70px, 18vw, 86px);
+  height: clamp(70px, 18vw, 86px);
+  border-radius: clamp(18px, 5vw, 24px);
   object-fit: cover;
   box-shadow: 0 4px 14px rgba(0 0 0 / .18);
   border: 3px solid rgba(255 255 255 / .7);
@@ -52,7 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   color: #fff;
   letter-spacing: .5px;
@@ -61,16 +61,98 @@
 }
 .profile-avatar.fallback { font-family: 'Gloria Hallelujah', cursive; }
 .profile-body { display: flex; flex-direction: column; gap: .4rem; position: relative; z-index: 2; }
-.profile-name { margin: 0; font-size: 1.4rem; background: linear-gradient(90deg,var(--egde-blue),var(--egde-purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.profile-role { margin: 0; font-size: .85rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-description-color); font-weight: 600; }
-.profile-bio { margin: .2rem 0 0; font-size: .95rem; line-height: 1.45; color: var(--text-description-color); }
+.profile-name { margin: 0; font-size: clamp(1.2rem, 3.5vw, 1.4rem); background: linear-gradient(90deg,var(--egde-blue),var(--egde-purple)); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.profile-role { margin: 0; font-size: clamp(0.75rem, 2vw, 0.85rem); letter-spacing: 1px; text-transform: uppercase; color: var(--text-description-color); font-weight: 600; }
+.profile-bio { margin: .2rem 0 0; font-size: clamp(0.85rem, 2.2vw, 0.95rem); line-height: 1.45; color: var(--text-description-color); }
 .profile-links { display: flex; gap: .75rem; margin-top: .5rem; }
-.profile-links a img { width: 26px; height: 26px; filter: drop-shadow(0 2px 3px rgba(0 0 0 / .25)); transition: transform .25s, filter .4s; }
+.profile-links a img { width: clamp(22px, 5vw, 26px); height: clamp(22px, 5vw, 26px); filter: drop-shadow(0 2px 3px rgba(0 0 0 / .25)); transition: transform .25s, filter .4s; }
 .profile-links a:hover img { transform: translateY(-3px) scale(1.05); filter: drop-shadow(0 4px 6px rgba(0 0 0 / .35)); }
 
 @media (max-width: 640px) {
-  .profile-card { flex-direction: column; align-items: center; text-align: center; }
-  .profile-avatar { width: 92px; height: 92px; }
-  .profile-body { align-items: center; }
-  .profile-bio { text-align: center; }
+  .profile-card { 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    min-width: 220px;
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  .profile-avatar { 
+    width: clamp(80px, 20vw, 92px); 
+    height: clamp(80px, 20vw, 92px); 
+  }
+  .profile-body { 
+    align-items: center; 
+  }
+  .profile-bio { 
+    text-align: center; 
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    min-width: 200px;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .profile-avatar {
+    width: clamp(65px, 16vw, 75px);
+    height: clamp(65px, 16vw, 75px);
+    border-radius: 16px;
+    border-width: 2px;
+  }
+  
+  .profile-name {
+    font-size: clamp(1.1rem, 3vw, 1.25rem);
+  }
+  
+  .profile-role {
+    font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+  }
+  
+  .profile-bio {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    line-height: 1.4;
+  }
+  
+  .profile-links a img {
+    width: clamp(20px, 4.5vw, 24px);
+    height: clamp(20px, 4.5vw, 24px);
+  }
+}
+
+@media (max-width: 360px) {
+  .profile-card {
+    min-width: 180px;
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+  
+  .profile-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    font-size: 1.3rem;
+  }
+  
+  .profile-name {
+    font-size: 1rem;
+  }
+  
+  .profile-role {
+    font-size: 0.65rem;
+  }
+  
+  .profile-bio {
+    font-size: 0.75rem;
+  }
+  
+  .profile-links {
+    gap: 0.5rem;
+  }
+  
+  .profile-links a img {
+    width: 18px;
+    height: 18px;
+  }
 }
