@@ -8,6 +8,7 @@ const Header = () => (
         <li><a href="#about">Om oss</a></li>
         <li><a href="#status1">Status 1</a></li>
         <li><a href="#status2">Status 2</a></li>
+        <li><a href="#refleksjon">Refleksjon</a></li>
     </ul>
   </nav>
 );
