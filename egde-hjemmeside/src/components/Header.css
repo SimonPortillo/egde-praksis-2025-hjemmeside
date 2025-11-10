@@ -71,6 +71,9 @@ nav ul li:nth-child(3) a:hover {
 nav ul li:nth-child(4) a:hover {
   color: var(--egde-purple);
 }
+nav ul li:nth-child(5) a:hover {
+  color: var(--egde-blue);
+}
 
 nav a:hover {
   transform: translateY(-2px);
@@ -90,6 +93,7 @@ nav ul li:nth-child(1) a::after { background-color: var(--egde-blue); }
 nav ul li:nth-child(2) a::after { background-color: var(--egde-yellow); }
 nav ul li:nth-child(3) a::after { background-color: var(--egde-orange); }
 nav ul li:nth-child(4) a::after { background-color: var(--egde-purple); }
+nav ul li:nth-child(5) a::after { background-color: var(--egde-blue); }
 nav a:hover::after {
   width: 100%;
 }

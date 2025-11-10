@@ -7,6 +7,7 @@ function Refleksjon() {
 
             {/* Main Reflection Section */}
             <section className="content-section">
+                <h2 className="section-title">Refleksjon over praksisperioden</h2>
                 <div className="text-content">
                     <p>
                         Vi ser tilbake på en lærerik og positiv praksisperiode hos Egde. Gjennom oppholdet har vi 
