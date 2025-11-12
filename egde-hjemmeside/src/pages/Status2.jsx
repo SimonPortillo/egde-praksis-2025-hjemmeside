@@ -4,7 +4,7 @@ function Status2() {
     const metrics = [
         { label: 'Fullførte komponenter', value: 26, accent: 'blue' },
         { label: 'Commits', value: 112, accent: 'yellow' },
-        { label: 'Gjenstående komponenter', value: 29, accent: 'orange' },
+        { label: 'Gjenstående komponenter', value: 34, accent: 'orange' },
     ];
 
     return (
