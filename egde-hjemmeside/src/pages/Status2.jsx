@@ -3,7 +3,7 @@ import './Status1.css';
 function Status2() {
     const metrics = [
         { label: 'Fullførte komponenter', value: 26, accent: 'blue' },
-        { label: 'Commits', value: 98, accent: 'yellow' },
+        { label: 'Commits', value: 112, accent: 'yellow' },
         { label: 'Gjenstående komponenter', value: 29, accent: 'orange' },
     ];
 
