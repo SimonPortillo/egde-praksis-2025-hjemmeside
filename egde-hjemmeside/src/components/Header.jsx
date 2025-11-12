@@ -9,6 +9,7 @@ const Header = () => (
         <li><a href="#status1">Status 1</a></li>
         <li><a href="#status2">Status 2</a></li>
         <li><a href="#refleksjon">Refleksjon</a></li>
+        <li><a href="#prosjekt-dagbok">Prosjektdagbok</a></li>
     </ul>
   </nav>
 );

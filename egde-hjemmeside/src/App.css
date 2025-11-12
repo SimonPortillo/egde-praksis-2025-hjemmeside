@@ -90,6 +90,9 @@ section[id]:last-of-type::after { display: none; }
 
 #status1 .page-title { background: linear-gradient(90deg, var(--egde-blue), var(--egde-yellow)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 #status2 .page-title { background: linear-gradient(90deg, var(--egde-orange), var(--egde-purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+#status2 .page-title { background: linear-gradient(90deg, var(--egde-orange), var(--egde-purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+#refleksjon .page-title { background: linear-gradient(90deg, var(--egde-purple), var(--egde-blue)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+#prosjekt-dagbok .page-title { background: linear-gradient(90deg, var(--egde-orange), var(--egde-purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
 /* Fancy Status Section Enhancements */
 .fancy-status { position: relative; overflow: hidden; }
@@ -108,11 +111,11 @@ section[id]:last-of-type::after { display: none; }
 /* Timeline */
 .timeline { list-style: none; margin: 0; padding: .5rem 0 0 0; position: relative; }
 .timeline::before { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--egde-blue), var(--egde-purple)); opacity: .35; }
-.timeline-item { position: relative; display: flex; gap: 1.25rem; padding: 0 0 1.4rem 0; }
+.timeline-item { position: relative; display: flex; gap: 1.25rem; padding: 0 0 1.4rem 0; align-items: flex-start; }
 .timeline-item:last-child { padding-bottom: 0; }
-.timeline-item .dot { width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, var(--egde-blue), var(--egde-purple)); box-shadow: 0 0 0 4px rgba(16 128 229 / .15), 0 4px 10px -2px rgba(0 0 0 / .25); position: relative; margin-top: .35rem; }
+.timeline-item .dot { width: 16px; height: 16px; flex-shrink: 0; border-radius: 50%; background: linear-gradient(135deg, var(--egde-blue), var(--egde-purple)); box-shadow: 0 0 0 4px rgba(16 128 229 / .15), 0 4px 10px -2px rgba(0 0 0 / .25); position: relative; margin-top: .35rem; }
 .timeline-item h3 { margin: 0 0 .25rem; font-size: 1.05rem; letter-spacing: .5px; }
-.timeline-item p { margin: 0; font-size: .9rem; line-height: 1.45; color: var(--text-description-color); }
+.timeline-item p { margin: 0; font-size: 1rem; line-height: 1.45; color: var(--text-description-color); white-space: pre-line; }
 
 /* Metrics */
 .progress-layout { display: flex; flex-direction: column; gap: 2rem; }

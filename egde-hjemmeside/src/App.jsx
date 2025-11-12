@@ -5,6 +5,7 @@ import About from './pages/About'
 import Status1 from './pages/Status1'
 import Status2 from './pages/Status2'
 import Refleksjon from './pages/Refleksjon'
+import ProsjektDagbok from './pages/ProsjektDagbok'
 import './App.css'
 
 function App() {
@@ -33,6 +34,11 @@ function App() {
         {/* Refleksjon Section */}
         <section id="refleksjon">
           <Refleksjon />
+        </section>
+
+        {/* Prosjekt Dagbok Section */}
+        <section id="prosjekt-dagbok">
+          <ProsjektDagbok />
         </section>
       </main>
       <Footer />

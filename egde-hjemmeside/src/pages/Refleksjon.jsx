@@ -1,9 +1,27 @@
 import './Status1.css';
 
+const metrics = [
+        { label: 'Fullførte komponenter', value: 33, accent: 'blue' },
+        { label: 'Commits', value: 146, accent: 'yellow' },
+        { label: 'Gjenstående komponenter', value: 27, accent: 'orange' },
+    ];
+
 function Refleksjon() {
     return (
         <div className="page-container fancy-status">
             <h1 className="page-title">Avsluttende refleksjon</h1>
+             {/* Progress Overview */}
+            <div className="progress-layout" style={{ marginBottom: '40px' }}>
+                
+                <div className="metrics-grid">
+                    {metrics.map(m => (
+                        <div key={m.label} className={`metric-card accent-${m.accent}`}>
+                            <span className="metric-value">{m.value}</span>
+                            <span className="metric-label">{m.label}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
             {/* Main Reflection Section */}
             <section className="content-section">
