@@ -1,9 +1,9 @@
 import './Status1.css';
 
 const metrics = [
-        { label: 'Fullførte komponenter', value: 33, accent: 'blue' },
-        { label: 'Commits', value: 146, accent: 'yellow' },
-        { label: 'Gjenstående komponenter', value: 27, accent: 'orange' },
+        { label: 'Fullførte komponenter', value: 37, accent: 'blue' },
+        { label: 'Commits', value: 175, accent: 'yellow' },
+        { label: 'Gjenstående komponenter', value: 23, accent: 'orange' },
     ];
 
 function Refleksjon() {
