@@ -81,7 +81,7 @@ section[id]::after {
 section[id]:last-of-type::after { display: none; }
 
 /* Status sections subtle variation */
-#status1 .page-container, #status2 .page-container {
+#status1 .page-container, #status2 .page-container, #refleksjon .page-container, #prosjekt-dagbok .page-container {
   background: linear-gradient(135deg, rgba(255 255 255 / .85), rgba(255 255 255 / .65));
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
